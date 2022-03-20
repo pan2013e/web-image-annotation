@@ -8,12 +8,12 @@ const _captcha_enable = false;
 
 module.exports = {
     credentials: {
-        username: process.env.DB_USERNAME ||  "pzy",
-        passwd: process.env.DB_PASSWD || "Pzy12345",
-        dbname: process.env.DB_NAME || "webapp",
-        hosturl: process.env.DB_URL || "dds-bp1e73a6fffcefa41330-pub.mongodb.rds.aliyuncs.com:3717",
+        username: process.env.DB_USERNAME,
+        passwd: process.env.DB_PASSWD,
+        dbname: process.env.DB_NAME ,
+        hosturl: process.env.DB_URL,
         protocol: process.env.DB_PROTOCOL || "mongodb",
-        options: process.env.DB_OPT || "replicaSet=mgset-58384600"
+        options: process.env.DB_OPT
     },
     server: {
         frontend_port: 8080,
@@ -30,16 +30,16 @@ module.exports = {
         region: 'ap-shanghai',
         bucket: 'wp-1300750006',
         TencentCloud: {
-            SecretId: process.env.OSS_SID || 'AKIDznLcfRwA8oDMDpAF3cuvf8KFtFLAj02o',
-            SecretKey: process.env.OSS_SKEY || 'WljQr1uVpsd8MJzPcZEcka9RTEivsYx4'
+            SecretId: process.env.OSS_SID,
+            SecretKey: process.env.OSS_SKEY
         }
     },
     captcha: {
         enable: _captcha_enable,
-        secret: process.env.CAPTCHA_SECRET || '6LckeZ8cAAAAAOItP9VVzmLBMCdzEvWZYmYOtIvz'
+        secret: process.env.CAPTCHA_SECRET
     },
     token: {
-        secret: process.env.TOKEN_SECRET || 'pzy3190101093zju',
+        secret: process.env.TOKEN_SECRET,
         option: {
             expiresIn: '3d'
         }
